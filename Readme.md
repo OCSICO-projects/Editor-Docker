@@ -20,17 +20,17 @@ sudo sed -i '1s/^/127.0.0.1       editor.local\n/' /etc/hosts
 ```
 cp mysql/docker-entrypoint-initdb.d/createdb.sql.example mysql/docker-entrypoint-initdb.d/createdb.sql
 ```
-- `docker-compose build nginx mysql php-worker`
+- `docker-compose build nginx mysql php-worker laravel-echo-server`
 
 - Start docker containers on production:
 
-`docker-compose up -d nginx mysql php-worker redis`
+`docker-compose up -d nginx mysql php-worker redis laravel-echo-server`
 
 ## Development
 
 Start docker containers:
 
-`docker-compose up -d nginx mysql php-worker redis phpredisadmin portainer`
+`docker-compose up -d nginx mysql php-worker redis laravel-echo-server phpredisadmin portainer`
 
 Open your browser with enabled port:
 
